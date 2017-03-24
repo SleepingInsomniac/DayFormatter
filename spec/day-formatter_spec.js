@@ -17,8 +17,11 @@ describe("DayFormatter", function() {
     });
 
     it("groups consecutive days into the next week", function() {
-      // expect(DayFormatter.groupConsecutiveDays([6,7,1,2])).toEqual([[6,7,1,2]]);
       expect(DayFormatter.groupConsecutiveDays([6,7,1,2])).toEqual([ [1,2,], [6,7] ]);
+    });
+
+    it("handles numbers out of range", function() {
+      expect(DayFormatter.groupConsecutiveDays([6,7,8,9])).toEqual([ [6,7,1,2] ]);
     });
 
   });
