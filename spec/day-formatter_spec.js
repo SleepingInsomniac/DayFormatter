@@ -65,6 +65,19 @@ describe("DayFormatter", function() {
       expect(DayFormatter.formatDayRange([1,2,3])).toEqual('Monday - Wednesday');
     });
 
+    it("displays day ranges with dashes and commas", function() {
+      expect(DayFormatter.formatDayRange([1,2,3,5,6,7])).toEqual('Monday - Wednesday, Friday - Sunday');
+    });
+
+    it("can't really handle ranges across weeks...", function() {
+      // It needs to sort days.. that doesn't really play well with ranges across weeks
+      expect(DayFormatter.formatDayRange([6,7,1,2])).toEqual('Monday, Tuesday, Saturday, Sunday');
+    });
+
+    it('Can handle out of range numbers', function() {
+      expect(DayFormatter.formatDayRange([6,7,8,9])).toEqual('Saturday - Tuesday');
+    });
+
   });
 
 });
