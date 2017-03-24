@@ -1,0 +1,14 @@
+{
+  "name": "day-formatter",
+  "version": "1.0.0",
+  "description": "Formats days of the week",
+  "main": "lib/day-formatter.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Alex Clink <code@alexclink.com> (http://alexclink.com)",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
