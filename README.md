@@ -1,6 +1,8 @@
 DayFormatter
 ============
 
+Convert days in an array to a concise human readable string.
+
 created with node `v7.7.4`, and yarn `0.21.3`
 
 Usage
@@ -17,5 +19,4 @@ Setup
 
 Test
 ------
-* option a: (global jasmine) `jasmine`
-* option b: (local jasmine) `yarn run test`
+* (jasmine) `yarn run test`
